@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestione Lamentele Anonime</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('background.jpg'); /* Sostituisci 'background.jpg' con il tuo percorso immagine */
+      background-size: cover;
+      color: #fff;
+    }
+    header {
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    form {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      margin: 50px auto;
+      max-width: 600px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+    select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Gestione Lamentele Anonime</h1>
+  </header>
+
+  <form id="complaintForm">
+    <label for="complaintType">Tipo di Lamentela:</label>
+    <select id="complaintType" name="complaintType" required>
+      <option value="mobbing">Mobbing</option>
+      <option value="molestie">Molestie</option>
+      <option value="consigli">Consigli</option>
+      <option value="altro">Altro</option>
+    </select><br>
+
+    <label for="complaintDetails">Dettagli della Lamentela:</label>
+    <textarea id="complaintDetails" name="complaintDetails" rows="4" required></textarea><br>
+
+    <button type="button" onclick="submitForm()">Invia Lamentela</button>
+  </form>
+
+  <footer>
+    © 2023 Gestione Lamentele Anonime
+  </footer>
